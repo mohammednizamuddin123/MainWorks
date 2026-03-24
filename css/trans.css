@@ -1,0 +1,21 @@
+div{
+    height: 100px;
+    width: 100px;
+    /* border-radius:50% ; */
+    background-color: crimson;
+    transition-timing-function:inherit;
+    transition-delay: 1s;
+    transition: all;
+    transition-duration: 3s;
+    color: aliceblue;
+    /* text-align: center; */
+    
+    
+    
+}
+div:hover{
+    background-color: rgb(8, 5, 167);
+    width: 200px;
+    font-size: large;
+    text-align: center;
+}

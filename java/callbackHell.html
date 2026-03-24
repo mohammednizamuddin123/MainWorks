@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function putInBox(callback){
+            setTimeout(()=>{
+                console.log("gift put in box")
+                callback();
+                
+            },1000)
+        }
+        function wrapGift(callback){
+            setTimeout(()=>{
+                console.log("gift wrapped")
+                callback();
+                
+            },1000)
+        }
+        function tieRibbon(callback){
+            setTimeout(()=>{
+                console.log("ribbon tied")
+                callback();
+                
+            },1000)
+        }
+        function addTag(callback){
+            setTimeout(()=>{
+                console.log("tag added")
+                callback();
+            },1000)
+        }
+        function giftReady(callback){
+            setTimeout(()=>{
+                console.log(" gift ready...")
+            },1000)
+        }
+        putInBox(()=>{wrapGift(()=>{tieRibbon(()=>{addTag(()=>{giftReady()})})})})
+
+
+
+    </script>
+    
+</body>
+</html>

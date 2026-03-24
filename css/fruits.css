@@ -1,0 +1,30 @@
+ol{
+    font-size: 20px;
+    list-style: none;
+    list-style-position: inside;
+    background-color: red;
+    padding: 10px;
+
+}
+#a1{
+    list-style-image: url(big\ apple\ 2.png) ;
+    padding:5px;
+}
+#a2{
+    list-style-image: url(small\ orange.jpg) ;
+    padding:5px;
+}
+#a3{
+    list-style-image:url(b2mages.png) ;
+    padding:5px;
+}
+li{
+    background-color: bisque;
+    margin: 5px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+body{
+    padding-right: 50%;
+}

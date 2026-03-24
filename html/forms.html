@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            background-color:darkgreen;
+        }
+        body{
+            background-color: darkgray;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="table.html">
+        <h1>STUDENTS FORM</h1>
+        <label for="a1">username : </label>
+        <input type="text" placeholder="enter your name" id="a1" name="username" required><br><br>
+
+        <label for="p1">password : </label>
+        <input type="password" placeholder="enter your password" id="p1" name="password" required>
+
+        <p>select your gender : </p>
+        <input type="radio" id="r1" name="gender" required>
+        <label for="r1">male</label><br>
+
+        <input type="radio" id="r2" name="gender">
+        <label for="r2">female</label>
+
+        <p>select your subjets:</p>
+        <input type="checkbox" id="c1" name="subjects">
+        <label for="c1">maths</label><br>
+
+        <input type="checkbox" id="c2" name="subjects">
+        <label for="c2">science</label><br>
+
+        <input type="checkbox" id="c3" name="subjects">
+        <label for="c3">social</label><br>
+
+        <input type="checkbox" id="c4" name="subjects">
+        <label for="c4">english</label><br><br>
+
+        <label for="d1">select your place : </label>
+        <select name="places" id="d1">
+            <option value="kasaragod">ksd</option>
+            <option value="kannur">kannur</option>
+            <option value="kozhikode">calicut</option>
+            <option value="cochin">kochi</option>
+        </select><br><br>
+
+        <label for="s1">select the date : </label>
+        <input type="date" name="date" id="s1"><br><br>
+
+        <label for="t1">enter your feeback :  </label><br><br>
+        <textarea name="feedback" rows="5" id="t1" placeholder="place provide your valuable feedback"></textarea><br><br>
+        <button type="submit">login</button>
+</body>
+</html>
