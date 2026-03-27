@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <h1>fetch</h1>
+    <ul id="list"></ul>
+    <script>
+        let list = document.querySelector("#list");
+        async function fetchData() {
+            try{
+                let response = await fetch("http://localhost:3000/users");
+                let data = await response.json();
+                console.log("Data Loaded:",data);
+                data.forEach(user => {
+                    list.innerHTML=list.innerHTML + `<li>id:${user.id},name:${user.name},age:${user.age}</li>`
+                });
+
+            }
+            catch(err){
+                console.log("fetch error", err);
+                
+            }
+            
+
+            
+        }
+        fetchData()
+    </script>
+</body>
+</html>

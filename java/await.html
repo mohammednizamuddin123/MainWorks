@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        function putInBox(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    let task=Math.random() < 0.9
+                    if(task){
+                        console.log("Gift Put In Box");
+                        resolve()
+                    }
+                    else{
+                        reject(" Put in Box Failed")
+                    }
+                },3000)
+            })
+        }
+        function wrapGift(){
+            return new Promise((resolve,reject)=>{
+                    console.log("Gift Wrapped");
+                        resolve();
+                })
+            }
+            function tieRibbon(){
+            return new Promise((resolve,reject)=>{
+                    console.log("Gift Tied");
+                        resolve();
+                })
+            }
+            function addTag(){
+            return new Promise((resolve,reject)=>{
+                    console.log("Gift Tagged");
+                        resolve();
+                })
+            }
+            function giftReady(){
+            return new Promise((resolve,reject)=>{
+                    console.log("Gift Ready...");
+                        resolve();
+                })
+            }
+            async function PrepareGift(){
+                try{
+                    await putInBox();
+                    await wrapGift();
+                    await tieRibbon();
+                    await addTag();
+                    await giftReady();
+                }
+                catch(error){
+                    console.log("The error is:" ,error);
+                    
+                }
+            }
+            PrepareGift()
+                    
+                    
+            
+            
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" name="name" placeholder="enter name"><br><br>
+        <input type="text" name="grade" placeholder="enter grade"><br><br>
+        <input type="text" name="subject" placeholder="enter subject"><br><br>
+        <button type="submit" name="add"></button>
+    </form>
+    <div id="showStudents"></div>
+    <script>
+        class student {
+            constructor(name, grade, subject) {
+                this.name = name
+                this.grade = grade
+                this.subject = subject
+            }
+        }
+        let form = document.querySelector("#form")
+        let showStudents = document.querySelector("#showStudents")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            let name = form.name.value;
+            let grade = form.grade.value;
+            let subject = form.subject.value;
+            if (!name || !grade || !subject) {
+                return
+            }
+            let newStudent = new student(name, grade, subject)
+
+            let newDiv = document.createElement("div")
+            newDiv.innerHTML = `<h1>$(newStudent.name)</h1>
+                < h3 > $(newStudent.grade)</h3>
+                    <p>$(newStudent.subject)</p>`
+
+                        showStudents.appendchild(newDiv);
+            form.reset()
+
+        })
+
+    </script>
+</body>
+
+</html>

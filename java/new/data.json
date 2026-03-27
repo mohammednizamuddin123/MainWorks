@@ -1,0 +1,8 @@
+{
+    "name": "nizam",
+    "age": 22,
+    "address": {
+        "city": "kasaragod",
+        "pin": 671121
+    }
+}

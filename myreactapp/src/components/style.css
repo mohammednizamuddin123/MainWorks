@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: red;
+}
+header a{
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
