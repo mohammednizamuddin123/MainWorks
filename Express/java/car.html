@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <body>
+      <script>
+        let car={
+          brand:"toyota",
+          color:"black",
+          mileage:18,
+          imageUrl:"carimage.png"
+          start:()=>{
+            carStatus.textcontent="start"
+            carimg.classlist.remove("carimage")
+          },
+          stop:()=>{
+            carStatus.textcontent="stop"
+            carimg.classlist.remove("carimage")
+          }
+        }
+        let brand=document.querySelector("#brand")
+        let carimg=document.querySelector("#carimg")
+        let color=document.querySelector("#color")
+        let mileage=document.querySelector("#mileage")
+        let carStatus=document.querySelector("#carStatus")
+        let start=document.querySelector("#start")
+        let stop=document.querySelector("#stop")
+
+        brand.textcontent=car.brand
+        carimg.src=car.imageUrl
+        color.textContent=car.color
+        mileage.textContent= ~${car.mileage} km/1~
+      </script>
+    </body>
+  </head>
+  <body>
+    <div class="car-card">
+      <img id="carimg" alt="car image" height="200px" />
+      <p>color:<label id="color"></label></p>
+      <p>mileage:<label id="mileage"></label></p>
+      <p>status:<label id="status"></label></p>
+      <button id="start" onclick="car.start()">start</button>
+      <button id="stop" onclick="car.stop()">stop</button>
+    </div>
+  </body>
+</html>

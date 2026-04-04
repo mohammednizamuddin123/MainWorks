@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function greeting(name){
+            console.log(`Hello Welcome ${name}`);
+        }
+        function processUser(callback){
+            const userName="Nizam";
+            callback(userName)
+        }
+        processUser(greeting)
+
+        function sayHello(){
+            console.log("hello after 2seconds");
+        }
+        setTimeout(sayHello,3000)
+    </script>
+    
+</body>
+</html>
