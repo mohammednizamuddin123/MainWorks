@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>login</h1>
+    <form action="form1.html" id="login-form">
+      <input type="text" id="username" placeholder="Enter Your Name" required />
+      <br />
+      <br />
+      <input
+        type="password"
+        id="userpass"
+        placeholder="Enter Your password"
+        required
+      />
+      <br />
+      <br />
+    </form>
+    <button id="btn">Submit</button>
+    <script>
+        const form=document.querySelector("#login-form");
+        const btn=document.querySelector("#btn");
+        btn.addEventListener("click",()=>{
+            form.submit();
+        })
+    </script>
+  </body>
+</html>

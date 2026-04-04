@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "shifan",
+      "age": 18
+    },
+    {
+      "id": "4",
+      "name": "shubaiba",
+      "age": 22
+    },
+    {
+      "id": "5",
+      "name": "mufeeda",
+      "age": 22
+    },
+    {
+      "id": "6",
+      "name": "rifad",
+      "age": 23
+    },
+    {
+      "name": "shahin rizan",
+      "age": 21,
+      "id": "7"
+    }
+  ]
+}

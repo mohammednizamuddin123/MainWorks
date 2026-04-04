@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>login</h1>
+    <form id="form">
+      <input type="text" name="username" placeholder="Enter Your Name" required> <br> <br> 
+      <input type="password" name="userpass" placeholder="Enter Your Password"> <br> <br> 
+      <button type="submit">Submit</button>
+      <script>
+        let frm=document.querySelector("#form");
+        frm.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let name=frm.username.value;
+        let password=frm.userpass.value;
+        console.log(name);
+        console.log(password);
+        frm.reset()
+        })
+      </script>
+    </form>
+  </body>
+</html>

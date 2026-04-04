@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+<style> 
+ul li{
+    padding: 10px;
+    margin: 5px;
+    outline: 2px solid beige;
+    background-color: brown;
+    color:beige
+}
+
+</style>
+
+<body>
+    <h1>fetch</h1>
+    <h2>Get Datas</h2>
+    <ul id="list"></ul>
+    <h2>Post Datas</h2>
+    <form id="postForm">
+        <input type="text" name="id" placeholder="Enter Id">
+        <input type="text" name="name" placeholder="Enter Name">
+        <input type="number" name="age" placeholder="Enter Age">
+        <button type="submit">Post Data</button>
+    </form>
+    <h2>Put Data</h2>
+    <form id="putForm">
+        <input type="text" name="putId" placeholder="Enter Update Id">
+        <input type="text" name="putName" placeholder="Enter Updated Name">
+        <input type="number" name="putAge" placeholder="Enter Updated Age">
+        <button type="submit">Post Data</button>
+    </form>
+    <h2> Delete Data</h2>
+    <input type="text" id="deletedId" placeholder="Enter Delete User Id">
+    <button onclick="deleteData()">Delete Data</button>
+    <button onclick="deleteData1()">Delete</button>
+    <script>
+
+        
+        //GET DATA
+
+        let list = document.querySelector("#list");
+        async function fetchData() {
+            try {
+                let response = await fetch("http://localhost:3000/users");
+                let data = await response.json();
+                console.log("Data Loaded:", data);
+                data.forEach(user => {
+                    list.innerHTML = list.innerHTML + `<li>id:${user.id},name:${user.name},age:${user.age} <button onclick="editUser('${user.id}','${user.name}','${user.age})">EDIT</button><button onclick="deleteData1('${user.id}')">Delete</button> </li>`
+                });
+
+            }
+            catch (err) {
+                console.log("fetch error", err);
+
+            }
+        }
+        fetchData()
+
+        //POST DATA
+
+        let postForm = document.querySelector("#postForm");
+        postForm.addEventListener("submit", async (e) => {
+            e.preventDefault()
+
+            let id = postForm.id.value
+            let name = postForm.name.value
+            let age = postForm.age.value
+
+            if (!id || !name || !age) return;
+            let newUser = { 
+                id: id,  
+                name: name,
+                age: parseInt(age)
+            }
+
+
+            await fetch ("http://localhost:3000/users",{
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(newUser)
+        })
+        alert("Data Added")
+        postForm.reset()
+    })
+
+        //PUT DATA
+
+        let putForm = document.querySelector("#putForm");
+        putForm.addEventListener("submit", async (e) => {
+            e.preventDefault()
+
+            let id = putForm.putId.value
+            let name = putForm.putName.value
+            let age = putForm.putAge.value
+            if (!id || !name || !age) return;
+            const updatedUser = {
+                name: name,
+                age: parseInt(age)
+            }
+
+            await fetch (`http://localhost:3000/users/${id}`,{
+            method:"PUT",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(updatedUser)
+        })
+        alert("Data Updated")
+        putForm.reset()
+    })
+
+    //  Edit data
+
+    function editUser(){
+            console.log(id,name,age);
+             id = putForm.putId.value = id
+            name = putForm.putName.value = name
+            age = putForm.putAge.value = age
+            
+            
+        }
+
+        //Delete Data
+
+        async function deleteData() {
+            let id= document.querySelector("#deletedId").value;
+            if(!id) return;
+
+            let conf= confirm(`delete user${id}`)
+            if(!conf) return;
+
+            await fetch(`http://localhost:3000/users/${id}`,{
+                method:"DELETE"
+            })
+            
+        }
+        async function deleteData1(id){
+            
+
+            let conf= confirm(`delete user${id}`)
+            if(!conf) return;
+
+            await fetch(`http://localhost:3000/users/${id}`,{
+                method:"DELETE"
+            })
+
+        }
+
+
+
+        
+    </script>
+
+
+    
+</body >
+</html >
