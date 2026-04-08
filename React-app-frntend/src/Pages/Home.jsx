@@ -8,7 +8,7 @@ function Home() {
     
   }
   function toProduct(){
-    navTo("/product")
+    navTo("/products")
     
   }
   return (<>

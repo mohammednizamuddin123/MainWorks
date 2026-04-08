@@ -53,7 +53,8 @@
     background-image: url(bgimg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}.main-container{
+} 
+.main-container{
  width: 100%;
  height: 600px;
  display: flex;
@@ -170,7 +171,7 @@
     black;
 } 
 .main-content {
-  height: 800px;
+  height: 900px;
   width: 100%;
   background-color: black;
   position: relative;
@@ -179,6 +180,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 .main-content > h2 {
   font-weight: 520;
@@ -186,7 +188,7 @@
   left: 85px;
 }
 .football-cart {
-  height: 268px;
+  height: 400px;
   width: 1053px;
   /* background-color: cadetblue; */
   margin-top: 50px;
@@ -197,12 +199,17 @@
   /* position: relative; */
   /* right: 70px; */
   /* padding-left: 87px; */
+  padding: 20px;
+  margin: 15px;
 }
+
+
 .football-box {
   height: 252px;
-  width: 180px;
-   background-color: white; 
+ ; width: 180px;
 }
+
+
 .football-box > img {
   border: 1px solid transparent;
   border-radius: 9px;
@@ -218,7 +225,4 @@
   bottom: 110px;
   right: 15px;
 }
-
-
-
-
+ 
