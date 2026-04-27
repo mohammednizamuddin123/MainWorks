@@ -1,3 +1,59 @@
-.main-brand{
-    background-color: brown;
+.main-brand {
+  height: 800px;
+  width: 100%;
+  color: black;
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+  h1 {
+  font-weight: 520;
+  position: relative;
+  left: 85px;
+  align-items: center;
+  justify-content: center;
+
+}
+.brand-cart {
+  height: 350px;
+  width: 1053px;
+  /* background-color: cadetblue; */
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
+  /* right: 70px; */
+  /* padding-left: 87px; */
+  padding: 20px;
+  margin: 15px;
+  padding-top: 15px;
+
+}
+
+
+.brand-box {
+  height: 252px;
+  width: 180px;
+}
+
+
+.brand-box > img {
+  border: 1px solid transparent;
+  border-radius: 9px;
+}
+.brand-box > img:hover {
+  transform: scale(1.05);
+  transition: 0.1s ease-in-out;
+}
+.brand-box > i {
+  font-size: 80px;
+  z-index: 1;
+  position: relative;
+  bottom: 110px;
+  right: 15px;
 }

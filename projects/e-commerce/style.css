@@ -156,6 +156,14 @@
   align-items: center;
   flex-wrap: wrap;
 }
+footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
 .red-line {
   height: 100px;
   width: 100%;

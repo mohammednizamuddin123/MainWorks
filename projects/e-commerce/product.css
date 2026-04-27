@@ -10,14 +10,16 @@
   flex-wrap: wrap;
   
 }
-.main-content > h2 {
+ h1 {
   font-weight: 520;
   position: relative;
   left: 85px;
   align-items: center;
+  justify-content: center;
+
 }
 .football-cart {
-  height: 400px;
+  height: 350px;
   width: 1053px;
   /* background-color: cadetblue; */
   margin-top: 50px;
@@ -30,6 +32,8 @@
   /* padding-left: 87px; */
   padding: 20px;
   margin: 15px;
+  padding-top: 15px;
+
 }
 
 
